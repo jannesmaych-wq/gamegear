@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GameGear – Gaming-Zubehör unter 50 €</title>
+
+  <meta
+    name="description"
+    content="GameGear zeigt dir Gaming-Mäuse, Tastaturen und Headsets unter 50 €. Vergleiche günstiges Gaming-Zubehör und finde passende Angebote."
+  >
+
+  <style>
+    /* =========================
+       GRUNDLAYOUT
+    ========================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #08090d;
+      color: #f5f7fb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(8, 9, 13, 0.92);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid #242733;
+    }
+
+    .nav {
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 38px;
+      height: 38px;
+
+      margin-right: 8px;
+
+      border-radius: 10px;
+
+      background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #22d3ee
+      );
+
+      color: white;
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #aeb5c5;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      padding: 100px 0 90px;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(139, 92, 246, 0.25),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(34, 211, 238, 0.12),
+          transparent 30%
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #9da5b7;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(
+        90deg,
+        #a78bfa,
+        #22d3ee
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      max-width: 680px;
+
+      color: #aeb5c5;
+
+      font-size: 19px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 13px 19px;
+
+      border-radius: 11px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      border: none;
+
+      transition:
+        transform 0.2s,
+        opacity 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .button-primary {
+      background: white;
+      color: #08090d;
+    }
+
+    .button-secondary {
+      border: 1px solid #303542;
+      color: white;
+      background: #11131a;
+    }
+
+    .hero-card {
+      padding: 35px;
+
+      border-radius: 25px;
+
+      border: 1px solid #2b2f3b;
+
+      background:
+        linear-gradient(
+          145deg,
+          #141720,
+          #0d0f15
+        );
+
+      box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-circle {
+      width: 120px;
+      height: 120px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      margin-bottom: 25px;
+
+      font-size: 27px;
+      font-weight: 900;
+
+      background:
+        radial-gradient(
+          circle at 30% 25%,
+          white,
+          #a78bfa 25%,
+          #4c1d95 70%
+        );
+    }
+
+    .hero-card h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      color: #9da5b5;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 40px;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: #9da5b5;
+      margin-bottom: 35px;
+    }
+
+    /* =========================
+       FILTER
+    ========================== */
+
+    .filter-area {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-bottom: 30px;
+
+      flex-wrap: wrap;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter {
+      border: 1px solid #2a2e39;
+
+      background: #11131a;
+
+      color: #aeb5c5;
+
+      padding: 9px 14px;
+
+      border-radius: 10px;
+
+      cursor: pointer;
+    }
+
+    .filter.active {
+      background: white;
+      color: #08090d;
+      border-color: white;
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================== */
+
+    .products {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .product {
+      position: relative;
+
+      padding: 23px;
+
+      border-radius: 20px;
+
+      border: 1px solid #272b35;
+
+      background: #101219;
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 440px;
+
+      transition:
+        transform 0.2s,
+        border-color 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+      border-color: #454b5c;
+    }
+
+    .product-badge {
+      position: absolute;
+
+      top: 14px;
+      right: 14px;
+
+      background: white;
+      color: #08090d;
+
+      border-radius: 999px;
+
+      padding: 4px 9px;
+
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .product-image {
+      height: 150px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 20px;
+
+      border-radius: 15px;
+
+      background: #181b23;
+
+      font-size: 65px;
+    }
+
+    .category {
+      color: #8f98aa;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+    }
+
+    .product h3 {
+      font-size: 22px;
+
+      margin: 5px 0 8px;
+    }
+
+    .product-description {
+      color: #a5adbc;
+
+      font-size: 14px;
+
+      margin-bottom: 15px;
+    }
+
+    .specs {
+      display: flex;
+
+      gap: 6px;
+
+      flex-wrap: wrap;
+    }
+
+    .spec {
+      padding: 5px 8px;
+
+      border-radius: 999px;
+
+      background: #181b23;
+
+      border: 1px solid #292d37;
+
+      color: #c3cad6;
+
+      font-size: 11px;
+    }
+
+    .price {
+      font-size: 25px;
+
+      font-weight: 900;
+
+      margin-top: auto;
+
+      padding-top: 20px;
+    }
+
+    .affiliate-button {
+      width: 100%;
+
+      margin-top: 10px;
+
+      background: white;
+
+      color: #08090d;
+    }
+
+    .price-note {
+      color: #6f7787;
+
+      font-size: 10px;
+
+      margin-top: 8px;
+    }
+
+    /* =========================
+       VERGLEICH
+    ========================== */
+
+    .dark-section {
+      background: #0d0f15;
+
+      border-top: 1px solid #20232d;
+      border-bottom: 1px solid #20232d;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+
+      border-radius: 18px;
+
+      border: 1px solid #292d37;
+    }
+
+    table {
+      width: 100%;
+
+      min-width: 750px;
+
+      border-collapse: collapse;
+
+      background: #101219;
+    }
+
+    th,
+    td {
+      text-align: left;
+
+      padding: 17px;
+
+      border-bottom: 1px solid #252933;
+    }
+
+    th {
+      color: #8f98aa;
+
+      font-size: 11px;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+    }
+
+    td {
+      color: #d8dce5;
+    }
+
+    /* =========================
+       RATGEBER
+    ========================== */
+
+    .tips {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .tip {
+      padding: 25px;
+
+      border-radius: 17px;
+
+      border: 1px solid #292d37;
+
+      background: #101219;
+    }
+
+    .tip-number {
+      color: #a78bfa;
+
+      font-weight: 900;
+
+      font-size: 13px;
+    }
+
+    .tip h3 {
+      margin: 8px 0;
+    }
+
+    .tip p {
+      color: #9da5b5;
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 50px 0 25px;
+
+      border-top: 1px solid #20232d;
+
+      color: #9da5b5;
+    }
+
+    .footer-grid {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      color: white;
+
+      font-size: 20px;
+
+      font-weight: 900;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #aeb5c5;
+    }
+
+    .affiliate-notice {
+      margin-top: 35px;
+
+      padding-top: 18px;
+
+      border-top: 1px solid #20232d;
+
+      font-size: 11px;
+
+      color: #707888;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tips {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2.5px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      <span class="logo-box">GG</span>
+      GameGear
+    </a>
+
+    <nav>
+      <a href="#produkte">Produkte</a>
+      <a href="#vergleich">Vergleich</a>
+      <a href="#ratgeber">Ratgeber</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<main>
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <p class="eyebrow">
+        BUDGET GAMING · BIS 50 €
+      </p>
+
+      <h1>
+        Gutes Gaming-Zubehör
+        <span>muss nicht teuer sein.</span>
+      </h1>
+
+      <p class="hero-text">
+        Wir zeigen dir Gaming-Mäuse, Tastaturen und Headsets,
+        die interessant sind, wenn du dein Gaming-Setup günstig
+        verbessern möchtest.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#produkte"
+          class="button button-primary"
+        >
+          Produkte ansehen
+        </a>
+
+        <a
+          href="#vergleich"
+          class="button button-secondary"
+        >
+          Vergleichen
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <div class="hero-circle">
+        50 €
+      </div>
+
+      <h2>
+        Dein Budget.
+      </h2>
+
+      <p>
+        Eine Auswahl an Gaming-Zubehör für
+        Einsteiger und preisbewusste Gamer.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUKTE
+========================== -->
+
+<section id="produkte">
+
+  <div class="container">
+
+    <div class="filter-area">
+
+      <div>
+
+        <p class="eyebrow">
+          PRODUKT-AUSWAHL
+        </p>
+
+        <h2 class="section-title">
+          Gaming-Zubehör unter 50 €
+        </h2>
+
+        <p class="section-description">
+          Unsere Demo-Auswahl kannst du später mit
+          deinen echten Affiliate-Produkten erweitern.
+        </p>
+
+      </div>
+
+
+      <div class="filters">
+
+        <button
+          class="filter active"
+          data-filter="all"
+        >
+          Alle
+        </button>
+
+        <button
+          class="filter"
+          data-filter="mouse"
+        >
+          Mäuse
+        </button>
+
+        <button
+          class="filter"
+          data-filter="keyboard"
+        >
+          Tastaturen
+        </button>
+
+        <button
+          class="filter"
+          data-filter="headset"
+        >
+          Headsets
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="products">
+
+
+      <!-- PRODUKT 1 -->
+
+      <article
+        class="product"
+        data-category="mouse"
+      >
+
+        <span class="product-badge">
+          Beliebt
+        </span>
+
+        <div class="product-image">
+          🖱️
+        </div>
+
+        <p class="category">
+          GAMING-MAUS
+        </p>
+
+        <h3>
+          Logitech G502 HERO
+        </h3>
+
+        <p class="product-description">
+          Ergonomische Gaming-Maus mit vielen
+          programmierbaren Tasten und präzisem Sensor.
+        </p>
+
+        <div class="specs">
+
+          <span class="spec">
+            11 Tasten
+          </span>
+
+          <span class="spec">
+            25.600 DPI
+          </span>
+
+          <span class="spec">
+            Kabel
+          </span>
+
+        </div>
+
+        <div class="price">
+          ca. 34 €
+        </div>
+
+        <!--
+          HIER SPÄTER DEINEN AFFILIATE-LINK EINTRAGEN
+        -->
+
+        <a
+          href="#"
+          class="button affiliate-button"
+          onclick="affiliatePlaceholder(event)"
+        >
+          Preis ansehen →
+        </a>
+
+        <small class="price-note">
+          Preis kann sich ändern.
+        </small>
+
+      </article>
+
+
+      <!-- PRODUKT 2 -->
+
+      <article
+        class="product"
+        data-category="mouse"
+      >
+
+        <div class="product-image">
+          🖱️
+        </div>
+
+        <p class="category">
+          GAMING-MAUS
+        </p>
+
+        <h3>
+          Logitech G305 LIGHTSPEED
+        </h3>
+
+        <p class="product-description">
+          Kabellose Gaming-Maus mit HERO-Sensor
+          und langer Batterielaufzeit.
+        </p>
+
+        <div class="specs">
+
+          <span class="spec">
+            Wireless
+          </span>
+
+          <span class="spec">
+            12.000 DPI
+          </span>
+
+          <span class="spec">
+            6 Tasten
+          </span>
+
+        </div>
+
+        <div class="price">
+          ca. 37–45 €
+        </div>
+
+        <a
+          href="#"
+          class="button affiliate-button"
+          onclick="affiliatePlaceholder(event)"
+        >
+          Preis ansehen →
+        </a>
+
+        <small class="price-note">
+          Preis kann sich ändern.
+        </small>
+
+      </article>
+
+
+      <!-- PRODUKT 3 -->
+
+      <article
+        class="product"
+        data-category="mouse"
+      >
+
+        <div class="product-image">
+          🖱️
+        </div>
+
+        <p class="category">
+          GAMING-MAUS
+        </p>
+
+        <h3>
+          Razer DeathAdder Essential
+        </h3>
+
+        <p class="product-description">
+          Schlichte ergonomische Budget-Maus
+          für unkompliziertes Gaming.
+        </p>
+
+        <div class="specs">
+
+          <span class="spec">
+            5 Tasten
+          </span>
+
+          <span class="spec">
+            6.400 DPI
+          </span>
+
+          <span class="spec">
+            Kabel
+          </span>
+
+        </div>
+
+        <div class="price">
+          ca. 18–25 €
+        </div>
+
+        <a
+          href="#"
+          class="button affiliate-button"
+          onclick="affiliatePlaceholder(event)"
+        >
+          Preis ansehen →
+        </a>
+
+        <small class="price-note">
+          Preis kann sich ändern.
+        </small>
+
+      </article>
+
+
+      <!-- PRODUKT 4 -->
+
+      <article
+        class="product"
+        data-category="keyboard"
+      >
+
+        <div class="product-image">
+          ⌨️
+        </div>
+
+        <p class="category">
+          TASTATUR
+        </p>
+
+        <h3>
+          Sharkoon SKILLER SGK50 S3
+        </h3>
+
+        <p class="product-description">
+          Kompakte mechanische Tastatur für
+          ein platzsparendes Gaming-Setup.
+        </p>
+
+        <div class="specs">
+
+          <span class="spec">
+            Mechanisch
+          </span>
+
+          <span class="spec">
+            75 %
+          </span>
+
+          <span class="spec">
+            RGB
+          </span>
+
+        </div>
+
+        <div class="price">
+          ca. 29 €
+        </div>
+
+        <a
+          href="#"
+          class="button affiliate-button"
+          onclick="affiliatePlaceholder(event)"
+        >
+          Preis ansehen →
+        </a>
+
+        <small class="price-note">
+          Preis kann sich ändern.
+        </small>
+
+      </article>
+
+
+      <!-- PRODUKT 5 -->
+
+      <article
+        class="product"
+        data-category="keyboard"
+      >
+
+        <div class="product-image">
+          ⌨️
+        </div>
+
+        <p class="category">
+          TASTATUR
+        </p>
+
+        <h3>
+          SteelSeries Apex 3
+        </h3>
+
+        <p class="product-description">
+          Preisgünstige Gaming-Tastatur mit
+          Full-Size-Layout und Beleuchtung.
+        </p>
+
+        <div class="specs">
+
+          <span class="spec">
+            Full Size
+          </span>
+
+          <span class="spec">
+            RGB
+          </span>
+
+          <span class="spec">
+            DE-Layout
+          </span>
+
+        </div>
+
+        <div class="price">
+          ca. 20 €
+        </div>
+
+        <a
+          href="#"
+          class="button affiliate-button"
+          onclick="affiliatePlaceholder(event)"
+        >
+          Preis ansehen →
+        </a>
+
+        <small class="price-note">
+          Preis kann sich ändern.
+        </small>
+
+      </article>
+
+
+      <!-- PRODUKT 6 -->
+
+      <article
+        class="product"
+        data-category="headset"
+      >
+
+        <div class="product-image">
+          🎧
+        </div>
+
+        <p class="category">
+          HEADSET
+        </p>
+
+        <h3>
+          Razer BlackShark V2 X
+        </h3>
+
+        <p class="product-description">
+          Gaming-Headset mit Mikrofon für
+          Gaming und Voice-Chat.
+        </p>
+
+        <div class="specs">
+
+          <span class="spec">
+            3,5 mm
+          </span>
+
+          <span class="spec">
+            7.1
+          </span>
+
+          <span class="spec">
+            Mikrofon
+          </span>
+
+        </div>
+
+        <div class="price">
+          ca. 26–40 €
+        </div>
+
+        <a
+          href="#"
+          class="button affiliate-button"
+          onclick="affiliatePlaceholder(event)"
+        >
+          Preis ansehen →
+        </a>
+
+        <small class="price-note">
+          Preis kann sich ändern.
+        </small>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     VERGLEICH
+========================== -->
+
+<section
+  id="vergleich"
+  class="dark-section"
+>
+
+  <div class="container">
+
+    <p class="eyebrow">
+      SCHNELLVERGLEICH
+    </p>
+
+    <h2 class="section-title">
+      Die Produkte auf einen Blick
+    </h2>
+
+    <div class="table-wrapper">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Produkt
+            </th>
+
+            <th>
+              Kategorie
+            </th>
+
+            <th>
+              Preis
+            </th>
+
+            <th>
+              Interessant für
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>
+              Logitech G502 HERO
+            </td>
+
+            <td>
+              Maus
+            </td>
+
+            <td>
+              ca. 34 €
+            </td>
+
+            <td>
+              Viele Tasten & Allround-Gaming
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              Logitech G305
+            </td>
+
+            <td>
+              Maus
+            </td>
+
+            <td>
+              ca. 37–45 €
+            </td>
+
+            <td>
+              Kabelloses Gaming
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              Sharkoon SGK50 S3
+            </td>
+
+            <td>
+              Tastatur
+            </td>
+
+            <td>
+              ca. 29 €
+            </td>
+
+            <td>
+              Kompaktes Setup
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              Razer BlackShark V2 X
+            </td>
+
+            <td>
+              Headset
+            </td>
+
+            <td>
+              ca. 26–40 €
+            </td>
+
+            <td>
+              FPS & Voice-Chat
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     RATGEBER
+========================== -->
+
+<section id="ratgeber">
+
+  <div class="container">
+
+    <p class="eyebrow">
+      RATGEBER
+    </p>
+
+    <h2 class="section-title">
+      Worauf sollte man unter 50 € achten?
+    </h2>
+
+    <p class="section-description">
+      Ein paar einfache Punkte helfen dabei,
+      günstiges Gaming-Zubehör sinnvoll auszuwählen.
+    </p>
+
+
+    <div class="tips">
+
+
+      <div class="tip">
+
+        <div class="tip-number">
+          01
+        </div>
+
+        <h3>
+          Nicht von Zahlen blenden lassen
+        </h3>
+
+        <p>
+          Mehr DPI, mehr RGB oder mehr Tasten
+          bedeuten nicht automatisch bessere Hardware.
+        </p>
+
+      </div>
+
+
+      <div class="tip">
+
+        <div class="tip-number">
+          02
+        </div>
+
+        <h3>
+          Auf die Passform achten
+        </h3>
+
+        <p>
+          Besonders bei Mäusen sind Form und
+          Griffgefühl wichtiger als viele Datenblattwerte.
+        </p>
+
+      </div>
+
+
+      <div class="tip">
+
+        <div class="tip-number">
+          03
+        </div>
+
+        <h3>
+          Preise vergleichen
+        </h3>
+
+        <p>
+          Preise können sich ändern. Vor dem Kauf
+          solltest du deshalb den aktuellen Preis prüfen.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-logo">
+          GameGear
+        </div>
+
+        <p>
+          Gaming-Zubehör für kleines Budget.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#">
+          Impressum
+        </a>
+
+        <a href="#">
+          Datenschutz
+        </a>
+
+        <a href="#">
+          Affiliate-Hinweis
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="affiliate-notice">
+
+      <strong>
+        Affiliate-Hinweis:
+      </strong>
+
+      Einige Links auf dieser Website können
+      Affiliate-Links sein. Wenn du über einen solchen
+      Link etwas kaufst, können wir eine Provision erhalten.
+      Für dich ändert sich der Preis dadurch nicht.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  /* =========================
+     PRODUKT-FILTER
+  ========================== */
+
+  const filterButtons =
+    document.querySelectorAll(".filter");
+
+  const products =
+    document.querySelectorAll(".product");
+
+
+  filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      filterButtons.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+
+      const filter =
+        button.dataset.filter;
+
+
+      products.forEach(product => {
+
+        if (
+          filter === "all" ||
+          product.dataset.category === filter
+        ) {
+
+          product.style.display = "flex";
+
+        } else {
+
+          product.style.display = "none";
+
+        }
+
+      });
+
+    });
+
+  });
+
+
+  /* =========================
+     AFFILIATE-PLATZHALTER
+  ========================== */
+
+  function affiliatePlaceholder(event) {
+
+    event.preventDefault();
+
+    alert(
+      "Hier kommt später dein echter Affiliate-Link hinein."
+    );
+
+  }
+
+</script>
+
+</body>
+</html>
